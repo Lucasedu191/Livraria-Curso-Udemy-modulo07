@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ExemploLivrariaModulo07OOB.Endereço;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ExemploLivrariaModulo07OOB
 {
-     public class Pais
+     public class Pais: Entidade
     {
     }
 }

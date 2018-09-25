@@ -17,5 +17,16 @@ namespace ExemploLivrariaModulo07OOB.Transacao
         public long NumeroNota { get; set; }
         public List<Livro> ListaLivros { get; set; }
         public Fornecedor Fornecedor { get; set; }
+
+        public double CalcularPrecoTotalEntrada()
+        {
+            double precoCompraTotal = 0;
+            foreach (Livro livro in this.ListaLivros)
+            {
+                precoCompraTotal += livro.PrecoCompra;
+            }
+            return precoCompraTotal;
+        }
     }
+
 }
