@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ExemploLivrariaModulo07OOB.Endereço;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,13 +7,15 @@ using System.Threading.Tasks;
 
 namespace ExemploLivrariaModulo07OOB
 {
-    public abstract class Pessoa
+    public abstract class Pessoa : Entidade
     {
-        public int Codigo { get; set; }
-        public string Nome { get; set; }
+        public Pessoa()
+        {
+            this.EnderecoCompleto = new EnderecoCompleto();
+        }
         public string CPF { get; set; }
         public string CNPJ { get; set; }
         public EnumTipoPessoa tipoPessoa { get; set; }
-        public Endereco Endereco { get; set; }
+        public EnderecoCompleto EnderecoCompleto { get; set; }
     }
 }
